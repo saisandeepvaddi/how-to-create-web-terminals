@@ -19,7 +19,9 @@ function start() {
     terminal.open(document.getElementById("terminal-container"));
 
     // Add event listeners for pty process and terminal
-    // Since we enabled nodeIntegration in electron (see ./main.js file BrowserWindow options)
+    // Since we enabled nodeIntegration in electron (see ./main.js file BrowserWindow options), we don't need to use
+    // any socket to communicate between xterm/node-pty
+
     ptyProcess.on("data", function(data) {
       terminal.write(data);
     });
