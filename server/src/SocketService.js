@@ -1,3 +1,5 @@
+// SocketService.js
+
 // Manage Socket.IO server
 const socketIO = require("socket.io");
 const PTYService = require("./PTYService");
@@ -21,6 +23,7 @@ class SocketService {
 
       this.socket = socket;
 
+      // Just logging when socket disconnects.
       this.socket.on("disconnect", () => {
         console.log("Disconnected Socket: ", socket.id);
       });

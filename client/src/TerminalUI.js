@@ -1,3 +1,5 @@
+// TerminalUI.js
+
 import { Terminal } from "xterm";
 import "xterm/css/xterm.css";
 
@@ -5,7 +7,7 @@ export class TerminalUI {
   constructor(socket) {
     this.terminal = new Terminal();
 
-    /** You can make your terminals colorful */
+    /* You can make your terminals colorful :) */
     this.terminal.setOption("theme", {
       background: "#202B33",
       foreground: "#F5F8FA"

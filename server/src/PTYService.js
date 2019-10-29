@@ -1,8 +1,11 @@
+// PTYService.js
+
 const os = require("os");
 const pty = require("node-pty");
 
 class PTY {
   constructor(socket) {
+    // Setting default terminals based on user os
     this.shell = os.platform() === "win32" ? "powershell.exe" : "bash";
     this.ptyProcess = null;
     this.socket = socket;
@@ -17,8 +20,6 @@ class PTY {
   startPtyProcess() {
     this.ptyProcess = pty.spawn(this.shell, [], {
       name: "xterm-color",
-      cols: 80,
-      rows: 30,
       cwd: process.env.HOME, // Which path should terminal start
       env: process.env // Pass environment variables
     });

@@ -1,5 +1,9 @@
+// index.js
+
 import { TerminalUI } from "./TerminalUI";
 import io from "socket.io-client";
+
+// IMPORTANT: Make sure you replace this address with your server address.
 
 const serverAddress = "http://localhost:8080";
 
