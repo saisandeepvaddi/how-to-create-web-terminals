@@ -17,7 +17,7 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^7.0.0",
+    "electron": "^9.4.0",
     "electron-rebuild": "^1.8.6" // For some reason, we need it here https://stackoverflow.com/a/52796884/7376662
   },
   "dependencies": {
